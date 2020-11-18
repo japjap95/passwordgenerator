@@ -1,0 +1,34 @@
+<resources>
+    <!-- Main activity -->
+    <string name="app_name">darkside</string>
+    <string name="h1">Password Generator</string>
+    <string name="button">Construct Password</string>
+    <string name="special_characters">Special Characters</string>
+    <string name="numbers">Numbers</string>
+    <string name="uppercase">Uppercase letters</string>
+    <string name="length_hint">Length</string>
+    <string name="password_hint">Your new password will appear here</string>
+    <string name="password_result">t e s t</string>
+    <string name="construct_password">Construct Password</string>
+    <string name="lowercase_letters">Lowercase letters</string>
+    <string name="security_prompt">Using a strong password isn\'t the only step you should take
+        to protect yourself. \n \n Consider enabling two-factor authentication, and never reuse
+        passwords for important accounts.
+        </string>
+
+    <!--2fa section -->
+    <string name="security_title_1">The power of two-factor authentication</string>
+    <string name="security_body_1">Two-factor authentication is a system that uses either your
+        mobile device or other physical hardware
+        to add another layer of protection to your account.</string>
+    <string name="security_body_2">A year-long study from Google in conjunction with the
+        universities of New York and San Diego has shown that two-factor authentication is highly
+        effective, blocking an average of:\n
+        100% of automated attacks\n
+        98.3% of phishing attacks\n
+        88.6% of directly targeted attacks performed by skilled hackers
+        authentication blocks </string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+</resources>

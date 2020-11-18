@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.darkside.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <style name="Widget.darkside.Switch" parent="android:Widget.Material.CompoundButton.Switch">
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="Button" parent="ThemeOverlay.AppCompat">
+        <item name="android:colorAccent">#9CF565</item>
+    </style>
+
+</resources>

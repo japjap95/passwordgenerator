@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/main_heading"
+            style="@style/Widget.darkside.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/h1"
+            android:textSize="34sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="30dp" />
+
+        <ImageView
+            android:id="@+id/lowercase_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/icon_spacing_left"
+            android:layout_marginLeft="@dimen/icon_spacing_left"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/lowercase_switch"
+            app:srcCompat="@drawable/ic_lowercase" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/lowercase_switch"
+            style="@style/Widget.darkside.Switch"
+            android:layout_width="@dimen/switch_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/switch_spacing"
+            android:layout_marginLeft="@dimen/switch_spacing"
+            android:layout_marginTop="30dp"
+            android:checked="true"
+            android:text="@string/lowercase_letters"
+            app:layout_constraintStart_toEndOf="@id/lowercase_icon"
+            app:layout_constraintTop_toBottomOf="@+id/main_heading" />
+
+
+        <ImageView
+            android:id="@+id/uppercase_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/icon_spacing_left"
+            android:layout_marginLeft="@dimen/icon_spacing_left"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/uppercase_switch"
+            app:srcCompat="@drawable/ic_uppercase" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/uppercase_switch"
+            style="@style/Widget.darkside.Switch"
+            android:layout_width="@dimen/switch_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/switch_spacing"
+            android:layout_marginLeft="@dimen/switch_spacing"
+            android:checked="true"
+            android:text="@string/uppercase"
+            app:layout_constraintStart_toEndOf="@id/uppercase_icon"
+            app:layout_constraintTop_toBottomOf="@+id/lowercase_switch" />
+
+        <ImageView
+            android:id="@+id/numbers_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/icon_spacing_left"
+            android:layout_marginLeft="@dimen/icon_spacing_left"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/numbers_switch"
+            app:srcCompat="@drawable/ic_numbers" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/numbers_switch"
+            style="@style/Widget.darkside.Switch"
+            android:layout_width="@dimen/switch_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/switch_spacing"
+            android:layout_marginLeft="@dimen/switch_spacing"
+            android:checked="true"
+            android:text="@string/numbers"
+            app:layout_constraintStart_toEndOf="@id/numbers_icon"
+            app:layout_constraintTop_toBottomOf="@+id/uppercase_switch" />
+
+        <ImageView
+            android:id="@+id/special_characters_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/icon_spacing_left"
+            android:layout_marginLeft="@dimen/icon_spacing_left"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/special_characters_switch"
+            app:srcCompat="@drawable/ic_special_characters" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/special_characters_switch"
+            style="@style/Widget.darkside.Switch"
+            android:layout_width="@dimen/switch_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/switch_spacing"
+            android:layout_marginLeft="@dimen/switch_spacing"
+            android:checked="true"
+            android:text="@string/special_characters"
+            app:layout_constraintStart_toEndOf="@id/special_characters_icon"
+            app:layout_constraintTop_toBottomOf="@id/numbers_switch" />
+
+        <ImageView
+            android:id="@+id/length_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/icon_spacing_left"
+            android:layout_marginLeft="@dimen/icon_spacing_left"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/special_characters_icon"
+            app:srcCompat="@drawable/ic_length" />
+
+        <EditText
+            android:id="@+id/length_edittext"
+            android:fontFamily="monospace"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/length_hint"
+            android:inputType="phone"
+            app:layout_constraintStart_toStartOf="@id/special_characters_switch"
+            app:layout_constraintTop_toBottomOf="@id/special_characters_switch">
+        </EditText>
+
+        <TextView
+            android:id="@+id/password_result_textview"
+            android:fontFamily="monospace"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:hint="@string/password_hint"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/length_edittext" />
+
+        <ImageView
+            android:id="@+id/copy_to_clipboard_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@id/password_result_textview"
+            app:layout_constraintTop_toTopOf="@id/password_result_textview"
+            app:srcCompat="@drawable/ic_copy_to_clipboard" />
+
+        <Button
+            android:id="@+id/construct_password_button"
+            android:fontFamily="monospace"
+            android:backgroundTint="#E69E0F"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="60dp"
+            android:text="@string/construct_password"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/length_edittext"
+            app:layout_constraintTop_toBottomOf="@id/password_result_textview" />
+
+        <TextView
+            android:id="@+id/security_tips_prompt"
+            style="@style/Widget.darkside.TextView"
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/security_prompt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/construct_password_button"
+            android:layout_marginLeft="20dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
